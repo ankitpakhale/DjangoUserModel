@@ -37,7 +37,6 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'app1',
     'accounts',
 
 ]
@@ -75,7 +74,7 @@ TEMPLATES = [
 LOGIN_REDIRECT_URL = 'home'
 LOGOUT_REDIRECT_URL = 'home'
 
-AUTH_USER_MODEL = 'app1.CustomUser'
+AUTH_USER_MODEL = 'accounts.User'
 
 # django user model end
 
