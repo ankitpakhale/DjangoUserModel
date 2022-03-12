@@ -4,8 +4,9 @@ from django.db import models
 # Create your models here.
 
 class CustomUser(AbstractUser):
-    pass
+    name = models.CharField(max_length=30, blank=True)
+    email = models.EmailField(max_length=30, blank=True)
     # add additional fields in here
 
     def __str__(self):
-        return self.username
+        return self.name
