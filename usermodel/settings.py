@@ -56,7 +56,7 @@ ROOT_URLCONF = 'usermodel.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['/home/user5/Documents/ank10/UserMaster/usermodel/app1/templates'],
+        'DIRS': [str(BASE_DIR.joinpath('templates'))],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
