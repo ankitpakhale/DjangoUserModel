@@ -56,7 +56,11 @@ ROOT_URLCONF = 'usermodel.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [str(BASE_DIR.joinpath('templates'))],
+        'DIRS': [],
+
+        'DIRS': [str(BASE_DIR.joinpath('templates'))], # new
+
+
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -71,10 +75,13 @@ TEMPLATES = [
 
 
 # django user model start
+
 LOGIN_REDIRECT_URL = 'home'
 LOGOUT_REDIRECT_URL = 'home'
+ 
 
-AUTH_USER_MODEL = 'accounts.User'
+AUTH_USER_MODEL = 'accounts.CustomUser'
+
 
 # django user model end
 
