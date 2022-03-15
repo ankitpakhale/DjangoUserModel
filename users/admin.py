@@ -7,7 +7,6 @@ from django.forms import TextInput, Textarea
 
 class UserAdminConfig(UserAdmin):
     model = NewUser
-    
     search_fields = ('email', 'user_name', 'first_name',)
     list_filter = ('email', 'user_name', 'first_name', 'is_active', 'is_staff')
     ordering = ('-start_date',)
